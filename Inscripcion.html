@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscripción - Colegio Eloy Alfaro</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="oferta.html">Oferta Académica</a></li>
+      <li><a href="inscripcion.html" class="activo">Inscripción</a></li>
+    </ul>
+  </nav>
+
+ <section class="bienvenida">
+  <h2>Formulario de Inscripción</h2>
+  <p>Complete la información a continuación para inscribir a su hijo/a.</p>
+</section>
+
+<section class="formulario-inscripcion">
+  <div class="container">
+    <div class="form-header">
+      <img src="img/Escudo.png" alt="Logo Colegio Eloy Alfaro" class="form-logo">
+      <h1>Formulario de Inscripción</h1>
+      <p class="lema">"Formando líderes con valores y excelencia académica"</p>
+    </div>
+
+    <div class="form-grid">
+      <!-- Columna del formulario -->
+      <div class="form-column">
+        <div class="form-intro">
+          <h2>Complete la información requerida</h2>
+          <p>Por favor llene todos los campos para inscribir a su hijo/a en la Unidad Educativa Eloy Alfaro</p>
+        </div>
+
+        <form class="inscripcion-form">
+          <div class="form-group">
+            <label for="nombre">Nombre completo del estudiante:</label>
+            <input type="text" id="nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label for="apellido">Apellidos del estudiante:</label>
+            <input type="text" id="apellido" required>
+          </div>
+
+          <div class="form-group">
+            <label for="nacimiento">Fecha de nacimiento:</label>
+            <div class="date-inputs">
+              <input type="number" id="dia" placeholder="DD" min="1" max="31" required>
+              <span>/</span>
+              <input type="number" id="mes" placeholder="MM" min="1" max="12" required>
+              <span>/</span>
+              <input type="number" id="anio" placeholder="AAAA" min="2000" max="2025" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cedula">Cédula o pasaporte del estudiante:</label>
+            <input type="text" id="cedula" required>
+          </div>
+
+          <div class="form-group">
+            <label for="nivel">Nivel educativo a inscribir:</label>
+            <select id="nivel" required>
+              <option value="">Seleccione el nivel</option>
+              <option value="inicial">Educación Inicial</option>
+              <option value="basica">Educación Básica</option>
+              <option value="bachillerato">Bachillerato General Unificado</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="representante">Nombre completo del representante:</label>
+            <input type="text" id="representante" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono de contacto:</label>
+            <input type="tel" id="telefono" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" required>
+          </div>
+
+          <div class="form-group checkbox">
+            <input type="checkbox" id="terminos" required>
+            <label for="terminos">Acepto los <a href="#">términos y condiciones</a> y autorizo el tratamiento de datos según la política de privacidad del colegio</label>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Enviar solicitud
+          </button>
+        </form>
+      </div>
+
+      <!-- Columna informativa -->
+      <div class="info-column">
+        <div class="info-card">
+          <h3><i class="fas fa-graduation-cap"></i> Requisitos de Inscripción</h3>
+          <ul>
+            <li>Copia de cédula o pasaporte del estudiante</li>
+            <li>Copia de cédula del representante</li>
+            <li>Certificado de votación del representante</li>
+            <li>2 fotos tamaño carnet</li>
+            <li>Certificado médico actualizado</li>
+            <li>Récord de calificaciones (para traslados)</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3><i class="fas fa-calendar-alt"></i> Proceso de Admisión</h3>
+          <ol>
+            <li>Completar este formulario</li>
+            <li>Entrevista con el departamento académico</li>
+            <li>Prueba de ubicación (según el nivel)</li>
+            <li>Presentación de documentos</li>
+            <li>Pago de matrícula</li>
+          </ol>
+        </div>
+
+        <div class="info-card contacto-card">
+          <h3><i class="fas fa-question-circle"></i> ¿Necesita ayuda?</h3>
+          <p>Contáctenos para resolver sus dudas:</p>
+          <p><i class="fas fa-phone"></i> (06) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> admisiones@colegioeloyalfaro.edu.ec</p>
+          <p><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 - 16:00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-principal">
+  <div class="container">
+    <div class="footer-contenido">
+      <div class="footer-logo">
+        <img src="img/Escudo.png" alt="Logo Colegio Eloy Alfaro">
+        <p>Formando generaciones con valores y excelencia</p>
+      </div>
+      
+      <div class="footer-derechos">
+        <p>&copy; 2025 Unidad Educativa Eloy Alfaro - Todos los derechos reservados.</p>
+        <p>Desarrollado por <strong>Aguilar España Juan</strong></p>
+      </div>
+      
+      <div class="footer-redes">
+        <a href="https://www.facebook.com/p/Unidad-Educativa-Eloy-Alfaro-100057535535790/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/colegioeloyalfaro/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
