@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colegio Eloy Alfaro - Galería</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Header (igual que otras páginas) -->
+
+  <!-- Navbar actualizado con nueva pestaña -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="oferta.html">Oferta Académica</a></li>
+      <li><a href="galeria.html" class="activo">Galería</a></li>
+      <li><a href="inscripcion.html">Inscripción</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido específico de Galería -->
+ <section class="galeria">
+  <div class="container">
+    <h2>Galería Institucional</h2>
+    <p class="subtitulo">Conoce nuestros espacios, actividades y momentos especiales</p>
+    
+    <!-- Video destacado -->
+    <div class="video-destacado">
+      <h3>Tour Virtual por Nuestras Instalaciones</h3>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/Ra8BnjrvaO4" 
+          title="Video tour Colegio Eloy Alfaro" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-descripcion">Conoce nuestras modernas instalaciones y ambientes educativos en este recorrido virtual</p>
+    </div>
+      <!-- Filtros por categorías -->
+      <div class="filtros">
+        <button class="filtro-btn active" data-categoria="todas">Galeria</button>
+   
+      </div>
+
+      <!-- Grid de imágenes -->
+      <div class="galeria-grid">
+        <!-- Ejemplo de ítem de galería -->
+        <div class="galeria-item" data-categoria="instalaciones">
+          <img src="img/galeria1.jpg" alt="Vista frontal del colegio">
+          <div class="galeria-overlay">
+            <h3>Feria Escolar</h3>
+            <p>Estudiantes exponen sus proyectos con creatividad e innovación.</p>
+          </div>
+        </div>
+
+        <div class="galeria-item" data-categoria="eventos">
+          <img src="img/galeria2.jpg" alt="Fiesta de independencia">
+          <div class="galeria-overlay">
+            <h3>Salida Cultural</h3>
+            <p>Alumnos disfrutan de una jornada de convivencia y aprendizaje.</p>
+          </div>
+        </div>
+         <div class="galeria-item" data-categoria="eventos">
+          <img src="img/galeria3.jpg" alt="Fiesta de independencia">
+          <div class="galeria-overlay">
+            <h3>Acto Institucional</h3>
+            <p>Estudiantes y autoridades se reúnen en un evento especial.</p>
+          </div>
+        </div>
+         <div class="galeria-item" data-categoria="eventos">
+          <img src="img/galeria4.jpg_large" alt="Fiesta de independencia">
+          <div class="galeria-overlay">
+            <h3>Jornada Educativa</h3>
+            <p>Celebración de logros con docentes y compañeros.</p>
+          </div>
+        </div>
+         <div class="galeria-item" data-categoria="eventos">
+          <img src="img/galeria5.jpg" alt="Fiesta de independencia">
+          <div class="galeria-overlay">
+            <h3>Juegos Infantiles</h3>
+            <p>Los más pequeños aprenden y se divierten jugando.</p>
+          </div>
+    
+        </div> <div class="galeria-item" data-categoria="eventos">
+          <img src="img/galeria7.jpg" alt="Fiesta de independencia">
+          <div class="galeria-overlay">
+            <h3>Exposición Histórica</h3>
+            <p>Estudiantes presentan personajes destacados de la historia.</p>
+          </div>
+        </div>
+
+        <!-- Añadir más imágenes siguiendo el mismo formato -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (igual que otras páginas) -->
+  <footer>
+    <p>&copy; 2025 Unidad Educativa Eloy Alfaro - Todos los derechos reservados.</p>
+    <p>Desarrollado por [Tu Nombre o Grupo]</p>
+  </footer>
+
+  <!-- Script para la galería -->
+  <script src="js/galeria.js"></script>
+</body>
+</html>
+
+
+<SCRipt>
+    document.addEventListener('DOMContentLoaded', function() {
+  // Filtrado de imágenes
+  const filtros = document.querySelectorAll('.filtro-btn');
+  const galeriaItems = document.querySelectorAll('.galeria-item');
+
+  filtros.forEach(filtro => {
+    filtro.addEventListener('click', function() {
+      // Remover clase active de todos los botones
+      filtros.forEach(btn => btn.classList.remove('active'));
+      // Añadir clase active al botón clickeado
+      this.classList.add('active');
+      
+      const categoria = this.dataset.categoria;
+      
+      // Filtrar imágenes
+      galeriaItems.forEach(item => {
+        if(categoria === 'todas' || item.dataset.categoria === categoria) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Efecto lightbox (opcional)
+  const galeriaImgs = document.querySelectorAll('.galeria-item img');
+  galeriaImgs.forEach(img => {
+    img.addEventListener('click', function() {
+      // Aquí puedes implementar un lightbox
+      console.log('Imagen clickeada:', this.src);
+    });
+  });
+});
+</SCRipt>

@@ -1569,3 +1569,170 @@ footer {
     font-size: 1.8rem;
   }
 }
+/*GALERIA*/
+/* Estilos para la galería */
+.galeria {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.galeria h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.galeria .subtitulo {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filtro-btn {
+  padding: 0.8rem 1.5rem;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.filtro-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+.filtro-btn.active {
+  background: #2c3e50;
+  font-weight: bold;
+}
+
+/* Grid de galería */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.galeria-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #0000001a;
+  aspect-ratio: 4/3;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.galeria-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: #c1121e9c;
+  color: white;
+  padding: 1.5rem;
+  transition: bottom 0.3s ease;
+}
+
+.galeria-item:hover .galeria-overlay {
+  bottom: 0;
+}
+
+.galeria-item:hover img {
+  transform: scale(1.05);
+}
+
+.galeria-overlay h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .galeria-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .galeria h2 {
+    font-size: 2rem;
+  }
+  
+  .filtro-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+}/* Estilos para el video destacado */
+.video-destacado {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.video-destacado h3 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Relación 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 2000px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-descripcion {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-destacado h3 {
+    font-size: 1.5rem;
+  }
+  
+  .video-container {
+    border-radius: 0;
+    margin: 0 -20px; /* Sangrado completo en móviles */
+    width: calc(100% + 40px);
+  }
+}
