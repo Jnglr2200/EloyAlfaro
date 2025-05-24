@@ -92,7 +92,34 @@
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" required>
           </div>
+<div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" required>
+          </div>
 
+          <!-- Nuevo apartado para subir imágenes -->
+          <div class="form-group">
+            <label>Documentos requeridos (subir imágenes):</label>
+            <div class="file-upload-group">
+              <div class="file-upload-item">
+                <label for="cedula-file">Cédula del estudiante:</label>
+                <input type="file" id="cedula-file" accept="image/*">
+              </div>
+              <div class="file-upload-item">
+                <label for="foto-file">Foto carnet (2):</label>
+                <input type="file" id="foto-file" accept="image/*" multiple>
+              </div>
+              <div class="file-upload-item">
+                <label for="certificado-file">Certificado médico:</label>
+                <input type="file" id="certificado-file" accept="image/*">
+              </div>
+              <div class="file-upload-item">
+                <label for="record-file">Récord académico (opcional):</label>
+                <input type="file" id="record-file" accept="image/*">
+              </div>
+            </div>
+            <p class="file-note">Formatos aceptados: JPG, PNG. Tamaño máximo por archivo: 2MB</p>
+          </div>
           <div class="form-group checkbox">
             <input type="checkbox" id="terminos" required>
             <label for="terminos">Acepto los <a href="#">términos y condiciones</a> y autorizo el tratamiento de datos según la política de privacidad del colegio</label>

@@ -3,7 +3,7 @@
   --color-negro: #000000;
   --color-amarillo: #f8f166;
   --color-blanco: #ffffff;
-  --color-marron2: #669bbc;
+  --color-marron2: #669bbc2d;
   --color-marron: #003049;
   --color-rojo: #c1121f;
 
@@ -1130,6 +1130,7 @@ iframe {
   width: 20px;
   text-align: center;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
